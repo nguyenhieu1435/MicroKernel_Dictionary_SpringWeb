@@ -1,1 +1,4 @@
 rootProject.name = 'MicroKernel_Dictionary_SpringWeb'
+include 'ModulePrototype'
+include 'EnglishModule'
+

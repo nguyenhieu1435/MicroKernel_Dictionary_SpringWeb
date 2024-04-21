@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" href="../static/css/index.css"/>
 </head>
 <body>
-$END$
+    <div class="container">
+        <form method="post" th:action="@{/translate}">
+            <details class="custom-select">
+                <summary class="radios">
+                    <input type="radio" name="source" id="english->vietnamese" title="English -> Vietnamese"
+                           value="english->vietnamese"
+                           checked>
+                    <input type="radio" name="source" id="vietnamese->english" title="Vietnamese -> English"
+                        value="vietnamese->english"
+                    >
+                </summary>
+                <ul class="list">
+                    <li>
+                        <label for="english->vietnamese">
+                            English -> Vietnamese
+                            <span></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="vietnamese->english">Vietnamese -> English</label>
+                    </li>
+                </ul>
+            </details>
+<!--            <select name="source">-->
+<!--                <option value="english->vietnamese">English -> Vietnamese</option>-->
+<!--                <option value="vietnamese->english">Vietnamese -> English</option>-->
+<!--            </select>-->
+            <div class="search-box">
+                <input
+                        type="text"
+                        placeholder="Type the word here.."
+                        name="word"
+                />
+                <button id="search-btn" type="submit">Search</button>
+            </div>
+        </form>
+        <h5 th:if="${message != null}" th:text="${message}" style="color: #ae9cff; margin-top: 10px; font-size: 18px;"></h5>
+
+        <th:block th:if="${vocabulary != null}">
+            <div th:if="${vocabulary.getDestination() != null}" class="result" id="result" th:each="destionationItem : ${vocabulary.getDestination()}">
+                <div class="details">
+                    <p th:text="${destionationItem.typeName}"></p>
+                    <p th:text="${vocabulary.phoneticTranscription}"></p>
+                </div>
+                <div class="word" th:if="${destionationItem.meanings != null}"
+                    th:each="meaningItem : ${destionationItem.meanings}"
+                >
+                    <h3 th:text="${meaningItem.toString()}"></h3>
+                </div>
+<!--                <p class="word-meaning">-->
+<!--                    The word "hi" used as a greeting.-->
+<!--                </p>-->
+                <div th:if="${destionationItem.example != null}" th:each="exampleItem : ${destionationItem.example}">
+                    <p class="word-example" th:text="${exampleItem.toString()}"></p>
+                </div>
+            </div>
+        </th:block>
+    </div>
 </body>
 </html>
