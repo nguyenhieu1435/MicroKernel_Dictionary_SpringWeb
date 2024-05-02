@@ -40,12 +40,12 @@
 
 ## Demo Chương trình
    * Người dùng có thể chọn tra cứu từ điển Anh -> Việt hoặc Việt -> Anh
-     
-    ![image](https://github.com/nguyenhieu1435/MicroKernel_Dictionary_SpringWeb/assets/70377398/cd065282-9565-46a5-a914-ab2bdc32e398)
+
+     ![image](https://github.com/nguyenhieu1435/MicroKernel_Dictionary_SpringWeb/assets/70377398/c8166676-b1d7-4dd1-b825-b0b3f7560750)
 
    * Dịch từ Anh -> Việt: người dùng có thể thấy được nghĩa tiếng việt, đó là loại từ gì: Danh từ, Tính từ ... và Phiên âm của nó, ngoài ra còn có cả ví dụ
      
-     ![image](https://github.com/nguyenhieu1435/MicroKernel_Dictionary_SpringWeb/assets/70377398/e398f9fe-1bff-48e2-bf0a-ceeacc64374e)
+     ![image](https://github.com/nguyenhieu1435/MicroKernel_Dictionary_SpringWeb/assets/70377398/ffdf905d-90df-420c-a863-7eb3afac9f26)
 
    * Dịch từ Việt -> Anh: người dùng có thể thấy được nghĩa Tiếng anh, đó là loại từ gì: Danh từ, Tính từ ... và Phiên âm của nó, ngoài ra còn có cả ví dụ
 
